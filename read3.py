@@ -12,4 +12,11 @@ request.add_header(
 	"Basic " + base64.encodestring(accesstoken+":").replace('\n',''))
 response = urllib2.urlopen(request)
 data = json.load(response)
+dic={}
+for d in data:
+	if(d['Code']=='SALARY'):
+		for i in d['Details']:
+			if(i['Code']=='MED'):
+				print(i['Code'],i['Value'])
+		
 print json.dumps(data,indent=2)
