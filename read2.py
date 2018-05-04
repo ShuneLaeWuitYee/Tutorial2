@@ -14,3 +14,4 @@ response = urllib2.urlopen(request)
 data = json.load(response)
 for c in data:
 	print c["KisCourseId"], c["Title"]
+ 
