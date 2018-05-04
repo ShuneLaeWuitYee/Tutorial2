@@ -17,6 +17,12 @@ for d in data:
 	if(d['Code']=='SALARY'):
 		for i in d['Details']:
 			if(i['Code']=='MED'):
-				print(i['Code'],i['Value'])
+				print("Sector Median salary for subject (6 months after graduation) .. ")
+				print(i['Value'])
+				#print(i['Code'],i['Value'])
+			if(i['Code']=='LDMED'):
+				print('Sector Median salary for subject (40 months after graduation) ..')
+				print(i['Value'])
+				#print(i['Code'],i['Value'])
 		
-print json.dumps(data,indent=2)
+#print json.dumps(data,indent=2)
